@@ -10,9 +10,9 @@
 
 
 
-  #IF you db seed your user will be
+  #IF you db seed your users will be
     #for company:
-        username: mamnager
+        username: manager
         password: 12345
     #for supplier
         username: supplier
