@@ -19,3 +19,14 @@ Route::get('/', 'AdminController@login');
 Route::post('/admin-login', 'AdminController@admin_login_check');
 Route::get('/logout', 'AdminController@logout');
 Route::get('/login', 'AdminController@login');
+
+
+//products
+
+//Product controll panel
+Route::resource('/prodcuts','ProductController');
+Route::post('/save-products', 'ProductController@store');
+Route::get('/product-all', 'ProductController@allProducts');
+Route::get('/product-ss', 'ProductController@product_ss');
+Route::get('/manage-product', 'ProductController@manage_products');
+Route::get('/manage-product-ss', 'ProductController@manage_products_ss');

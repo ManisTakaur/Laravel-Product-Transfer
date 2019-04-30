@@ -279,7 +279,36 @@
             </nav>
         </header>
         <!-- Left side column. contains the logo and sidebar -->
-        
+        <aside class="main-sidebar">
+                  <!-- sidebar: style can be found in sidebar.less -->
+                  <section class="sidebar">
+                      <!-- Sidebar user panel -->
+                      <div class="user-panel">
+                          <div class="pull-left image">
+                              <img src="employee_images/photo_default_emplyee1.png" class="img-circle" alt="User Image">
+                          </div>
+                          <div class="pull-left info">
+                              <p>{{$name}}</p>
+                              <small>{{$userCat}}</small>
+
+                          </div>
+                      </div>
+
+                      <ul class="sidebar-menu" data-widget="tree">
+
+                          
+
+
+                          @if($user_id==5)
+                                  <li class="treeview-menu">
+                                      <li><a href="{{URL::to('/manage-product')}}"><i class="fa fa-cart-plus"></i> Add Product Stock</a></li>
+                                  </li>
+                          @endif
+
+                      </ul>
+                  </section>
+                  <!-- /.sidebar -->
+              </aside>
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
@@ -297,15 +326,7 @@
                     <div class="double-bounce1"></div>
                     <div class="double-bounce2"></div>
                 </div>
-                <nav class="col-sm-1 navbar-right">
-                    <a href="#sectionMenu" data-toggle="modal">
-                    <ul class="alert" style="position: fixed;  z-index: 999;">
-                        <button class="btn btn-lg btn-danger" style="background: #f9f9f9;">
-                                <i class="fa fa-calendar" style="color:#178acc"></i>
-                        </button>
-                    </ul>
-                    </a>
-                </nav>
+
                 <br> @yield('content')
             </section>
             <!-- /.content -->
