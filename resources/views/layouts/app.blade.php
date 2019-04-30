@@ -296,7 +296,14 @@
 
                       <ul class="sidebar-menu" data-widget="tree">
 
-                          
+                          @if ($user_id == 4)
+                          <li><a href="{{URL::to('/view-checkout')}}"><i class="fa fa-adjust"></i> View Checkouts</a></li>
+                          @endif
+
+                          @if ($user_id ==5 )
+                              <li><a href="{{URL::to('/create-checkout')}}"><i class="fa fa-plus"></i> Create New Checkout</a></li>
+
+                          @endif
 
 
                           @if($user_id==5)

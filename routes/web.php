@@ -30,3 +30,13 @@ Route::get('/product-all', 'ProductController@allProducts');
 Route::get('/product-ss', 'ProductController@product_ss');
 Route::get('/manage-product', 'ProductController@manage_products');
 Route::get('/manage-product-ss', 'ProductController@manage_products_ss');
+
+
+
+
+
+// Products Checkout controll panel
+Route::get('/create-checkout', 'ProductCheckoutController@createcheckout');
+Route::post('/save-checkout', 'ProductCheckoutController@savecheckout');
+Route::get('/view-checkout', 'ProductCheckoutController@managecheckout');
+Route::get('/view-checkout-details/{ID}', 'ProductCheckoutController@checkoutDetails');
