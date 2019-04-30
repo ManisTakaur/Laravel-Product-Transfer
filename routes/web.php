@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\ProductController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,3 +10,12 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', 'AdminController@login');
+
+/*
+ * Start Admin Panel Routes
+ */
+Route::post('/admin-login', 'AdminController@admin_login_check');
+Route::get('/logout', 'AdminController@logout');
+Route::get('/login', 'AdminController@login');
